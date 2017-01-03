@@ -153,3 +153,98 @@ func split(sum int) (x, y int) {
 }
 ```
 
+## Loops
+
+### For
+
+```go
+for i := 0; i < 10; i++{
+	//do something
+}
+
+//or, initilization and increment are optional
+sum := 0
+for ; sum < 10; {
+	//do something
+}
+```
+
+For actually takes the place of While:
+
+```go
+sum := 0
+for sum < 10{
+	//do something
+}
+```
+
+
+Infinite loop:
+```go
+for {
+	//do something
+}
+```
+
+## Conditionals
+
+### If
+
+```go
+if x < 0 {
+	//do something
+}
+```
+
+Like For loops, if statement can start with a short declaration. The declared variable is only available within the scope of the if:
+
+```go
+if v := math.Pow(2, 2); v < 10{
+	return v
+}
+```
+
+### Else
+
+```go
+if v := something; v < somethingElse{
+	return v
+}
+else{
+	return somethingElse
+}
+```
+
+### Switch
+
+```go
+fmt.Print("Go runs on ")
+switch os := runtime.GOOS; os {
+case "darwin":
+	fmt.Println("OS X.")
+case "linux":
+	fmt.Println("Linux.")
+default:
+	// freebsd, openbsd,
+	// plan9, windows...
+	fmt.Printf("%s.", os)
+}
+```
+
+Switch without condition is the same as switch(true).
+
+## Other Keywords
+
+### Defer
+
+Defers execution of statement until rest of scope is executed
+
+```go
+defer fmt.Println("world")
+fmt.Println("Well...")
+fmt.Println("hello")	
+```
+
+looped defers are stacked LIFO
+
+## Pointers
