@@ -356,6 +356,25 @@ func main(){
 
 ### Slices of Slices
 
+2D Tick Tac Toe board:
+
+```go
+board := [][]string{
+	[]string{"_", "_", "_"},
+	[]string{"_", "_", "_"},
+	[]string{"_", "_", "_"},
+}
+```
+
+### Appending to Slices
+
+```go
+var s []int
+s = append(s, 0, 1, 2, 3)
+```
+
+If the underlying array doesn't have the capactiy for all the new values, a bigger array will be allocated
+
 ## Conditionals
 
 ### If
