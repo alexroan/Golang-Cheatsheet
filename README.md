@@ -1,5 +1,32 @@
 # Golang Cheatsheet
 
+## Project Management
+
+### Directory Structure
+
+* src
+	* source files, organised into folders of each project.
+* bin
+	* runnables
+* pkg
+	* built package files
+
+#### To create a package: 
+
+create the source files, then call:
+
+* go build /path/to/source/folder (or go build if in the directory)
+
+This will create the package in the pkg folder and can be imported into other projects.
+
+#### To create a runnable project: 
+
+create the source files, then call:
+
+* go install /path/to/course/folder (or go install is in the directory)
+
+This will create the runnables in bin. To run the runnable project files, just call /path/to/runnable/folder.
+
 ## Packages
 
 ```go
